@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Gift</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(to right, #f8e1f4, #ffb3c1); /* Soft pink gradient background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden; /* Prevent scrollbars */
+            position: relative;
+        }
+
+        /* Container for the circle */
+        .circle-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 350px;
+            height: 350px;
+            z-index: 2;
+        }
+
+        /* Love Symbol Animation */
+        .love-symbol {
+            font-size: 150px;
+            color: #ff4d6d;
+            animation: heartbeat 1.5s infinite ease-in-out;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            z-index: 2;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        /* Small hearts floating animation */
+        .small-heart {
+            position: absolute;
+            font-size: 30px;
+            color: #ff69b3;
+            animation: float 3s infinite;
+            z-index: 1;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-50px) rotate(30deg);
+            }
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+        }
+
+        /* Floating roses */
+        .rose {
+            position: absolute;
+            font-size: 50px;
+            color: #ff4d6d;
+            animation: rose 5s infinite;
+            z-index: 1;
+        }
+
+        @keyframes rose {
+            0% {
+                transform: translateY(0) scale(1);
+            }
+            50% {
+                transform: translateY(-100px) scale(1.2);
+            }
+            100% {
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* Decorative border animation */
+        .border {
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            border: 10px solid #ff69b3;
+            border-radius: 50%;
+            top: -30px;
+            left: -30px;
+            animation: pulse 2s infinite;
+            z-index: 1;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.7;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 0.7;
+            }
+        }
+
+        /* Message inside the love symbol */
+        .message {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 1.4;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            z-index: 3;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Circle Container (everything is centered inside) -->
+    <div class="circle-container">
+
+        <!-- Decorative Border -->
+        <div class="border"></div>
+
+        <!-- Love Symbol with Animation -->
+        <div class="love-symbol">
+            ❤️
+        </div>
+
+        <!-- Message Inside -->
+        <div class="message">
+            <p>Happy Valentine's Day!</p>
+            <p>I Love You!</p>
+        </div>
+
+    </div>
+
+    <!-- Small Floating Hearts (across the whole page) -->
+    <div class="small-heart" style="top: 10%; left: 15%;">♥</div>
+    <div class="small-heart" style="top: 40%; left: 25%;">♥</div>
+    <div class="small-heart" style="top: 70%; left: 45%;">♥</div>
+    <div class="small-heart" style="top: 80%; left: 70%;">♥</div>
+    <div class="small-heart" style="top: 60%; left: 85%;">♥</div>
+    <div class="small-heart" style="top: 20%; left: 80%;">♥</div>
+    <div class="small-heart" style="top: 90%; left: 5%;">♥</div>
+
+    <!-- Floating Roses (across the whole page) -->
+    <div class="rose" style="top: 5%; left: 50%;">🌹</div>
+    <div class="rose" style="top: 25%; left: 30%;">🌹</div>
+    <div class="rose" style="top: 40%; left: 75%;">🌹</div>
+    <div class="rose" style="top: 60%; left: 15%;">🌹</div>
+    <div class="rose" style="top: 80%; left: 50%;">🌹</div>
+    <div class="rose" style="top: 15%; left: 10%;">🌹</div>
+    <div class="rose" style="top: 85%; left: 80%;">🌹</div>
+    <div class="rose" style="top: 75%; left: 32%;">🌹</div>
+    <div class="rose" style="top: 52%; left: 43%;">🌹</div>
+    <div class="rose" style="top: 65%; left: 19%;">🌹</div>
+
+</body>
+</html>
